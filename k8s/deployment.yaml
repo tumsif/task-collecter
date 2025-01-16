@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tracker-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tracker-app
+  template:
+    metadata:
+      labels:
+        app: tracker-app
+    spec:
+      containers:
+        - name: tracker-app-container
+          image: tracker-app/task-tracker:latest
+          resources:
+            requests:
+              memory: "90Mi"
+              cpu: "90m"
+            limits:
+              memory: "100Mi"
+              cpu: "100m"
