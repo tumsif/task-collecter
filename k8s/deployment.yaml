@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: tracker-app-container
-          image: tracker-app/task-tracker:latest
+          image: tumsifu/taskerpy:1.0
           resources:
             requests:
               memory: "90Mi"
